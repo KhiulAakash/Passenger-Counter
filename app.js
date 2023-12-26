@@ -2,7 +2,7 @@
 const countEl = document.querySelector("#count-el");
 const incrementBtn = document.querySelector("#increment-btn");
 const saveBtn = document.querySelector("#save-btn");
-const saveEl = document.querySelector(".save #save-el");
+const saveEl = document.querySelector("#save-el");
 
 let count = 0;
 const saveHistory = []; // Array to store the last 3 counts
@@ -22,6 +22,8 @@ function saveCount() {
 
     // Display the last 3 counts in the save element
     saveEl.textContent = saveHistory.join(" - ");
+    count=0;
+    countEl.textContent = count;
 }
 
 // Event listeners
